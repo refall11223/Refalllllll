@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prank Halaman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Halaman Utama dengan Tombol -->
+  <div id="halaman-utama">
+    <h1>Selamat datang!</h1>
+    <p>Tekan tombol di bawah ini untuk "berpindah ke beranda"!</p>
+    <button class="btn" onclick="tampilkanBeranda()">Tekan di sini!</button>
+  </div>
+
+  <!-- Halaman Beranda yang tersembunyi -->
+  <div id="beranda" style="display: none;">
+    <h2>awoakwokaowoa</h2>
+    <p>hakan kontol</p>
+    <img src="images (6).jpeg" alt="Gambar Prank" />
+    <audio id="audio">
+      <source src="kintil.mp3" type="audio/mp3">
+      Browser Anda tidak mendukung elemen audio.
+      
+    </audio>
+  </div>
+  <script>
+    // Fungsi untuk menampilkan halaman beranda dan memutar audio
+    function tampilkanBeranda() {
+      document.getElementById('halaman-utama').style.display = 'none';
+      document.getElementById('beranda').style.display = 'block';
+
+      // Memastikan audio diputar setelah beranda muncul
+      const audio = document.getElementById('audio');
+      audio.play(); // Menjalankan audio secara eksplisit setelah tombol ditekan
+    }
+  </script>
+
+</body>
+</html>
+
+
